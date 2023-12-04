@@ -56,7 +56,7 @@ const SignupForm = ({
 
   return (
     <>
-      <Header />
+      <Header isActive={false} />
       <div className="flex justify-center items-center min-h-screen bg-white">
         <div className="w-full max-w-md bg-white bg-opacity-25 p-8 rounded-lg shadow-md">
           <h2 className="text-3xl font-bold mb-6 text-center">Registrarme</h2>

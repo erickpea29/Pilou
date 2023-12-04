@@ -74,7 +74,7 @@ const Verification: FC<Props> = ({ setActiveState }) => {
 
   return (
     <>
-      <Header />
+      <Header isActive={false} />
       <div className="min-h-screen flex items-center justify-center bg-white">
         <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
           <div className="text-center mb-8">
