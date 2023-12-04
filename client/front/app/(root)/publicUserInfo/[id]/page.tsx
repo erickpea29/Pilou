@@ -26,7 +26,7 @@ const Page = ({ params }: { params: { id: string } }) => {
   return (
     <div>
       <NextUIProvider>
-        <Header />
+        <Header isActive={false} />
         <div className="flex items-center justify-center h-screen relative text-center">
           <div
             className={
