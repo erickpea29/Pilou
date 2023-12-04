@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pilou</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #fafafa;
+        color: #222222;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+      .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .email-header {
+        background-color: #e9267f;
+        padding: 24px;
+        color: #ffffff;
+      }
+      .email-body {
+        padding: 24px;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-header">
+        <h1>¡Bienvenido a Pilou!</h1>
+      </div>
+      <div class="email-body">
+        <p>Hola <%= name %>,</p>
+        <p>
+          Gracias por registrarte en Pilou. Para activar tu cuenta, por favor
+          utiliza el siguiente código de activación:
+        </p>
+        <h2><%= activationCode %></h2>
+      </div>
+    </div>
+  </body>
+</html>
