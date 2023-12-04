@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Avatar } from "@nextui-org/react";
 import AvatarDrop from "./Dropdown";
 
-const Header = () => {
+const Header = ({ isActive = true }) => {
   return (
     <div className="bg-pink-600 p-4 flex items-center justify-between">
       <div className="w-40 h-12 flex-shrink-0 overflow-hidden">
@@ -17,9 +17,11 @@ const Header = () => {
           />
         </div>
       </div>
-      <div className="mr-4">
-        <AvatarDrop />
-      </div>
+      {isActive && (
+        <div className="mr-4">
+          <AvatarDrop />
+        </div>
+      )}
     </div>
   );
 };

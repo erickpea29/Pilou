@@ -186,7 +186,7 @@ const UserInfo: React.FC<UserInfoProps> = ({ userData }) => {
               <div className="col-span-1 flex flex-col items-center justify-center">
                 <div className="p-8 flex flex-col items-center justify-center">
                   <div className="flex items-center justify-center w-full">
-                    <QRCodeSVG value="https://reactjs.org/" />{" "}
+                    <QRCodeSVG value={`/publicUserInfo/${userData.id}`} />
                   </div>
                   <Link
                     href={`/publicUserInfo/${userData.id}`}

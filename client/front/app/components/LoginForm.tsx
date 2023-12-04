@@ -65,7 +65,7 @@ const LoginForm = ({
 
   return (
     <>
-      <Header />
+      <Header isActive={false} />
       <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <div className="max-w-md w-full p-10 bg-white shadow-lg rounded-md">
           <div className="flex justify-center mb-10 mt-8">

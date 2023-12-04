@@ -6,6 +6,7 @@ import { GET_USER_BY_ID } from "@/graphql/actions/getUserById.action";
 import { useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
+import { NextUIProvider } from "@nextui-org/react";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const userInfo = params;
@@ -25,8 +26,10 @@ const Page = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
-      <Header />
-      <UserInfo userData={userData} />
+      <NextUIProvider>
+        <Header />
+        <UserInfo userData={userData} />
+      </NextUIProvider>
     </>
   );
 };
