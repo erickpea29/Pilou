@@ -4,7 +4,9 @@ import Header from "@/app/components/Header";
 import React from "react";
 import { GET_USER_BY_ID } from "@/graphql/actions/getUserById.action";
 import { useQuery } from "@apollo/client";
-import { NextUIProvider } from "@nextui-org/react";
+import { NextUIProvider, button } from "@nextui-org/react";
+import PDFFile from "@/app/components/PDFFile";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const userInfo = params;
@@ -62,6 +64,20 @@ const Page = ({ params }: { params: { id: string } }) => {
                       </div>
                       <div>{userData.blood_type}</div>
                     </div>
+                    <PDFDownloadLink
+                      document={<PDFFile userData={userData} />}
+                      fileName="Data"
+                    >
+                      {({ loading }) =>
+                        loading ? (
+                          <button>Cargando</button>
+                        ) : (
+                          <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
+                            Descargar
+                          </button>
+                        )
+                      }
+                    </PDFDownloadLink>
                   </div>
                 </div>
               </div>
